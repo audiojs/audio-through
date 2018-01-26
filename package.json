@@ -1,52 +1,40 @@
 {
-  "name": "audio-generator",
-  "version": "2.1.2",
-  "description": "Generate audio stream based on function",
-  "main": "./stream.js",
+  "name": "audio-through",
+  "version": "3.0.0",
+  "description": "Process/generate audio data based on function",
+  "main": "./index.js",
   "scripts": {
     "preversion": "npm run lint && npm run test",
     "lint": "eslint *.js --ignore-pattern test*",
     "test": "node test.js",
-    "test:browser": "budo test.js -d ./test",
-    "watch": "watchify -r ./:audio-generator -r audio-gain -r audio-element -r stacktrace-parser -r fnbody -r codemirror -r codemirror/mode/javascript/javascript -r audio-speaker -o ./bundle.js"
+    "test:browser": "budo test.js -d ./test"
   },
   "style": "index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/audiojs/audio-generator"
+    "url": "https://github.com/audiojs/audio-through"
   },
   "keywords": [
     "audio",
+    "audiojs",
     "pcm",
     "generator",
+    "through",
     "web-audio",
     "web-components"
   ],
-  "author": "Deema Yvanow <dfcreative@gmail.com>",
+  "author": "Dmitry Yvanov <df.creative@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/audiojs/audio-generator/issues"
+    "url": "https://github.com/audiojs/audio-through/issues"
   },
-  "homepage": "https://github.com/audiojs/audio-generator",
-  "devDependencies": {
-    "audio-gain": "^1.0.1",
-    "audio-sink": "^1.0.2",
-    "audio-speaker": "^1.2.4",
-    "audio-through": "^2.0.2",
-    "pull-stream": "^3.4.4",
-    "eslint": "^3.4.0",
-    "audio-element": "^1.0.1",
-    "codemirror": "^5.7.0",
-    "fnbody": "latest",
-    "stacktrace-parser": "^0.1.3",
-    "tst": "^1.3.1"
-  },
+  "homepage": "https://github.com/audiojs/audio-through",
   "dependencies": {
-    "audio-buffer": "^2.4.5",
-    "audio-buffer-utils": "^4.0.0",
-    "audio-through": "^2.0.1",
-    "inherits": "^2.0.1",
-    "pcm-util": "^2.0.3",
-    "xtend": "^4.0.0"
-  }
+    "audio-buffer-from": "^1.0.3",
+    "audio-format": "^2.3.0",
+    "defined": "^1.0.0",
+    "is-audio-buffer": "^1.0.11",
+    "pcm-convert": "^1.6.4"
+  },
+  "devDependencies": {}
 }
