@@ -58,6 +58,7 @@ function createThrough (fn, format) {
 
 		// convert to target dtype
 		if (format.type === 'audiobuffer') return buf
+		if (format.type === 'array' && !dst) return data
 		if (dst && dst.length) return convert(buf, format, dst)
 		return convert(buf, format)
 	}

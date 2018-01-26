@@ -14,9 +14,7 @@ let through = createThrough(
   let [left, right, ...rest] = channelData
   let {time, count, format} = state
 
-  // modify channel data here and/or return new channel data
-
-  return channelData
+  // modify channels data here
 }, 'stereo audiobuffer')
 
 // hook up createThrough → speaker loop
@@ -33,7 +31,7 @@ Output data format can be a string `'planar stereo array'`, `'5.1 audiobuffer 44
 
 ### `through(target|length=1024)`
 
-Fill passed audio-buffer/array or create a new one of the `length` with throughd samples. Returns data container defined by `options.format`.
+Fill passed `target` or create a new one of the `length`, based on `fn` from the constructor. Target type is defined by `format`.
 
 ## Related
 
