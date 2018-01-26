@@ -1,6 +1,6 @@
 {
   "name": "audio-through",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Process/generate audio data based on function",
   "main": "./index.js",
   "scripts": {
